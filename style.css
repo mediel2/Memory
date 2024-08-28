@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.main {
+  padding-top: 20px;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  width: 650px;
+  height: 650px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 8px 8px 0 8px;
+  justify-content: space-between;
+  background-color: #1249ff;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-inner {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  background-color: #f3f781;
+  backface-visibility: hidden;
+}
+
+.active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button_start {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  font-family: "Rubik Spray Paint", system-ui;
+  font-weight: 400;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #05006b;
+}
+
+.button_start:hover {
+  color: #000;
+  background-color: #9cfffa;
+}
